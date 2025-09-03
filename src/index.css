@@ -115,40 +115,61 @@ All colors MUST be HSL.
     .container {
       @apply px-4;
     }
-    
-    /* Improve touch targets */
-    button {
-      min-height: 44px;
+
+    h1 {
+      @apply text-3xl leading-snug text-center;
     }
-    
-    /* Better text readability on mobile */
+
+    h2 {
+      @apply text-2xl leading-snug text-center;
+    }
+
     p {
-      line-height: 1.6;
+      @apply text-base leading-relaxed text-center;
     }
-    
-    /* Centralize text on mobile */
-    h1, h2, h3, p {
-      text-align: center;
+
+    /* Improve touch targets */
+    button, .btn, [role="button"] {
+      min-height: 48px;
+    }
+
+    /* Full-width primary actions */
+    .mobile-button, .btn-primary, .btn-cta {
+      @apply w-full;
+    }
+
+    /* Images responsive and centered */
+    img, video, svg, canvas {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Sections padding for breathing room */
+    section {
+      @apply py-6;
     }
   }
-  
+
   /* Additional mobile optimizations */
   @media (max-width: 768px) {
     /* Ensure text is centered on mobile */
     .mobile-center {
       text-align: center !important;
     }
-    
+
     /* Better spacing for mobile */
     .mobile-spacing {
       padding: 1rem;
       margin: 0.5rem 0;
     }
-    
+
     /* Improve button sizing for mobile */
     .mobile-button {
       width: 100%;
-      padding: 0.75rem 1rem;
+      padding: 0.875rem 1rem;
       font-size: 1rem;
       min-height: 48px;
     }
